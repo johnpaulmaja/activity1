@@ -14,12 +14,12 @@
    $link = $data->getElementsByTagName("link")->item(0)->nodeValue;
    $desc = $data->getElementsByTagName("description")->item(0)->nodeValue;
   
-    echo "{<li>$title
+    echo "<li>$title
             <ul>
-                <li>$link</li>
+                <li>$author</li>
                 <li>$desc</li>
             </ul>
-        </li>}";
+        </li>";
  
  }
 ?>
