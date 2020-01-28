@@ -19,7 +19,7 @@ header("Content-type:");
  <link></link>
  <language>en-us</language>";
  
- while($row = mysqli_fetch_array($query)){
+ while($row = mysqli_fetch_assoc($query)){
    $title=$row["title"];
    $link=$row["link"];
  
