@@ -1,32 +1,25 @@
-<?php
-// Create connection
-$con = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com","admin","root1234","db_1820681");
-// Check connection
- if (mysqli_connect_errno($con)) {
- echo "Database connection failed!: " . mysqli_connect_error();
- }
- 
- $sql = "SELECT * FROM tbl.rss_info ORDER BY id DESC LIMIT 20";
+<?php 
 
- $query = mysqli_query($con,$sql);
- 
-header("Content-type:");
- 
- echo "<?xml version='1.0' encoding='UTF-8'?>
- <rss version='2.0'>
- <channel>
- <title></title>
- <link></link>
- <language>en-us</language>";
- 
- while($row = mysqli_fetch_assoc($query)){
-   $title=$row["title"];
-   $link=$row["link"];
- 
-   echo "<item>
-   <title>$title</title>
-   <link>$link</link>
-   </item>";
- }
- echo "</channel></rss>";
+$rss= '<?xml version="1.0" encoding="UTF-8"?>';
+$rss .= '<rss version="2.0">';
+$rss .= '<channel>';
+
+$connect = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234", "db_1820681") or die (mysqli_error($connect));
+$sql = "SELECT * FROM tbl.rss_info";
+$query = mysqli_query($connect,$sql) or die (mysqli_error($connect));
+
+
+while($record= mysqli_fetch_assoc($query)) {
+    extract($record);
+    
+    $rss .= '<article>';
+    $rss .= '<title>' . $Horse . '</title>';
+    $rss .= '<link>' . $Coat . '</link>';
+    $rss .= '<description>' . $Category . '</description>';
+    $rss .= '</article>';
+}
+$rss .= '</channel>';
+$rss .= '</rss>';
+
+echo $rss; 
 ?>
