@@ -14,7 +14,7 @@ while($record= mysqli_fetch_assoc($query)) {
     $rss .= '<book>';
     $rss .= '<title>' . $title . '</title>';
     $rss .= '<author>' . $author . '</author>';
-    $rss .= '<description>' . $desc . '</description>';
+    $rss .= '<description>' . $description . '</description>';
     $rss .= '</book>';
 }
 $rss .= '</channel>';
