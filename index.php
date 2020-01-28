@@ -6,7 +6,7 @@ $con = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com","adm
  echo "Database connection failed!: " . mysqli_connect_error();
  }
  
- $sql = "SELECT * FROM rss_info ORDER BY id DESC LIMIT 20";
+ $sql = "SELECT * FROM tbl.rss_info ORDER BY id DESC LIMIT 20";
 
  $query = mysqli_query($con,$sql);
  
