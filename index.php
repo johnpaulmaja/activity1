@@ -1,7 +1,7 @@
 
 <?php
  $domOBJ = new DOMDocument();
- $domOBJ->load("https://majaact1.herokuapp.com/majarss.php");//XML page URL
+ $domOBJ->load("https://majaact1.herokuapp.com/");//XML page URL
  
  $content = $domOBJ->getElementsByTagName("book");
  
