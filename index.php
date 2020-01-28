@@ -3,7 +3,7 @@
  $domOBJ = new DOMDocument();
  $domOBJ->load("https://majaact1.herokuapp.com/majarss.php");//XML page URL
  
- $content = $domOBJ->getElementsByTagName("channel");
+ $content = $domOBJ->getElementsByTagName("article");
  
  ?>
  <ul>
