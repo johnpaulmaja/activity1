@@ -12,12 +12,12 @@
  {
    $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
    $author = $data->getElementsByTagName("author")->item(0)->nodeValue;
-   $desc = $data->getElementsByTagName("description")->item(0)->nodeValue;
+   $description = $data->getElementsByTagName("description")->item(0)->nodeValue;
   
     echo "<li>$title
             <ul>
                 <li>$author</li>
-                <li>$desc</li>
+                <li>$description</li>
             </ul>
         </li>";
  
