@@ -1,9 +1,9 @@
 
 <?php
  $domOBJ = new DOMDocument();
- $domOBJ->load("http://localhost/xml/");//XML page URL
+ $domOBJ->load("https://majaact1.herokuapp.com/majarss.php");//XML page URL
  
- $content = $domOBJ->getElementsByTagName("item");
+ $content = $domOBJ->getElementsByTagName("channel");
  
  ?>
  <ul>
@@ -12,10 +12,12 @@
  {
    $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
    $link = $data->getElementsByTagName("link")->item(0)->nodeValue;
+   $desc = $data->getElementsByTagName("description")->item(0)->nodeValue;
   
     echo "{<li>$title
             <ul>
                 <li>$link</li>
+                <li>$desc</li>
             </ul>
         </li>}";
  
