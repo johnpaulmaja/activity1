@@ -1,6 +1,6 @@
 <?php
 // Create connection
-$con = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com","admin","root1234","3306");
+$con = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com","admin","root1234","db_1820681");
 $db = mysqli_select_db($con,"rss");
 // Check connection
  if (mysqli_connect_errno($con)) {
