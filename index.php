@@ -3,7 +3,7 @@
  $domOBJ = new DOMDocument();
  $domOBJ->load("https://majaact1.herokuapp.com/majarss.php");//XML page URL
  
- $content = $domOBJ->getElementsByTagName("article");
+ $content = $domOBJ->getElementsByTagName("book");
  
  ?>
  <ul>
@@ -11,7 +11,7 @@
  foreach( $content as $data )
  {
    $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
-   $link = $data->getElementsByTagName("link")->item(0)->nodeValue;
+   $author = $data->getElementsByTagName("author")->item(0)->nodeValue;
    $desc = $data->getElementsByTagName("description")->item(0)->nodeValue;
   
     echo "<li>$title
