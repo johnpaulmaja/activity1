@@ -8,7 +8,7 @@
  ?>
  <ul>
     <?php
- foreach( $content as $data )
+ foreach( $record as $data )
  {
    $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
    $author = $data->getElementsByTagName("author")->item(0)->nodeValue;
