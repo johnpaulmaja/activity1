@@ -5,7 +5,7 @@
     $rssfeed .= '<channel>';
 
     $connect = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234", "db_1820681") or die(mysqli_error($connect));
-    $sql = "SELECT * FROM tblBook";
+    $sql = "SELECT * FROM tblbooks";
     $query = mysqli_query($connect,$sql) or die (mysqli_error($connect));
 
     while($row=mysqli_fetch_assoc($query)) {
