@@ -11,11 +11,11 @@
     while($row=mysqli_fetch_assoc($query)) {
         extract($row);
 
-        $rssfeed .= '<books>';
+        $rssfeed .= '<Books>';
         $rssfeed .= '<title>' . $title . '</title>';
         $rssfeed .= '<author>' . $author . '</author>';
         $rssfeed .= '<description>' . $description . '</description>';
-        $rssfeed .= '</books>';
+        $rssfeed .= '</Books>';
     }
 
     $rssfeed .= '</channel>';
