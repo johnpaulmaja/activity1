@@ -3,11 +3,11 @@
        $domOBJ = new DOMDocument();
        $domOBJ->load("https://maja-act-1.herokuapp.com/majarss.php");//XML page URL
 
-       $content = $domOBJ->getElementsByTagName("books");
+       $content = $domOBJ->getElementsByTagName("Books");
 ?>
     
        
-       <h1>Monsters</h1>
+       <h1>Books</h1>
            
        
         <?php
