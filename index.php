@@ -12,9 +12,9 @@
         <?php
               foreach($content as $data)
         {          
-           $Title = $data->getElementsByTagName("title")->item(0)->nodeValue;
-           $Author = $data->getElementsByTagName("author")->item(0)->nodeValue;
-           $Description = $data->getElementsByTagName("description")->item(0)->nodeValue;
+           $Title = $data->getElementsByTagName("Title")->item(0)->nodeValue;
+           $Author = $data->getElementsByTagName("Author")->item(0)->nodeValue;
+           $Description = $data->getElementsByTagName("Description")->item(0)->nodeValue;
            echo "<ul><h2>$Title</h2>
                     <ul>
                         <li>Author: $Author </li>
