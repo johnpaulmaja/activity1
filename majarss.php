@@ -14,7 +14,7 @@
         $rssfeed .= '<books>';
         $rssfeed .= '<title>' . $title . '</title>';
         $rssfeed .= '<author>' . $author . '</author>';
-        $rssfeed .= '<description >' . $description . '</description>';
+        $rssfeed .= '<description>' . $description . '</description>';
         $rssfeed .= '</books>';
     }
 
