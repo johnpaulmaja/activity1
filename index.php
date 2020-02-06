@@ -4,7 +4,7 @@
 
        $content = $domOBJ->getElementsByTagName("Books");
 ?>
-    
+    <?xml-stylesheet type="text/css" href="style.css"?> 
        
        <h1>Books</h1>
            
