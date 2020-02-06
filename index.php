@@ -12,13 +12,13 @@
         <?php
               foreach($content as $data)
         {          
-           $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
-           $author = $data->getElementsByTagName("author")->item(0)->nodeValue;
-           $description = $data->getElementsByTagName("description")->item(0)->nodeValue;
-           echo "<ul><h2>$title</h2>
+           $Title = $data->getElementsByTagName("title")->item(0)->nodeValue;
+           $Author = $data->getElementsByTagName("author")->item(0)->nodeValue;
+           $Description = $data->getElementsByTagName("description")->item(0)->nodeValue;
+           echo "<ul><h2>$Title</h2>
                     <ul>
-                        <li>Author: $author </li>
-                        <li>Description: $description</li>
+                        <li>Author: $Author </li>
+                        <li>Description: $Description</li>
                         
                     </ul>
                 </ul>";
