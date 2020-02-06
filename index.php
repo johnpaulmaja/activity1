@@ -1,28 +1,24 @@
 <?php
        $domOBJ = new DOMDocument();
-       $domOBJ->load("https://xmlact1vaflor.herokuapp.com/rss.php");//XML page URL
+       $domOBJ->load("https://xmlmaja.herokuapp.com/rss.php");//XML page URL
 
-       $content = $domOBJ->getElementsByTagName("Monsters");
+       $content = $domOBJ->getElementsByTagName("Books");
 ?>
     
        
-       <h1>Monsters</h1>
+       <h1>Books</h1>
            
        
         <?php
               foreach($content as $data)
         {          
-           $Monster = $data->getElementsByTagName("Monster")->item(0)->nodeValue;
-           $Classification = $data->getElementsByTagName("Classification")->item(0)->nodeValue;
-           $Immunity = $data->getElementsByTagName("Immunity")->item(0)->nodeValue;
-           $Tactics = $data->getElementsByTagName("Tactics")->item(0)->nodeValue;
-           $Occurence = $data->getElementsByTagName("Occurence")->item(0)->nodeValue;
-           echo "<ul><h2>$Monster</h2>
+           $Title = $data->getElementsByTagName("Title")->item(0)->nodeValue;
+           $Author = $data->getElementsByTagName("Author")->item(0)->nodeValue;
+           $Description = $data->getElementsByTagName("Description")->item(0)->nodeValue;
+           echo "<ul><h2>$Title</h2>
                     <ul>
-                        <li>Classification: $Classification </li>
-                        <li>Immunity: $Immunity</li>
-                        <li>Tactics: $Tactics</li>
-                        <li>Occurence: $Occurence</li>
+                        <li>Author: $Author </li>
+                        <li>Description: $Description</li>
                         
                     </ul>
                 </ul>";
